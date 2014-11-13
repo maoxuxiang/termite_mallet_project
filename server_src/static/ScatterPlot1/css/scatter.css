@@ -1,0 +1,56 @@
+.chart {
+	display:inline-block;
+}
+
+.axis line, .axis path {
+	stroke: #000;
+	fill: none;
+}
+
+.axis path, .axis line {
+	opacity:.2;
+}
+
+.axis text {
+	opacity:.6;
+	font-family:helvetica;
+}
+
+.point.highlighted {
+	fill-opacity:.8;
+	fill:red !important;
+}
+
+.point {
+	cursor:pointer;
+	stroke:black;
+	stroke-width:1px;
+	fill-opacity:.3;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor:pointer;
+}
+
+#scatter-0-title {
+	text-align:center;
+}
+
+.legend-g rect {
+	fill-opacity:.6;
+}
+
+#scatter-1-title {
+	text-align: center;
+	font-size:23px;
+}
+
+.axis-label {
+	font-size: 18px;
+}
+
+#yaxistext, #xaxistext {
+	font-family:helvetica;
+}

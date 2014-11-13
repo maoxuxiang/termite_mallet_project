@@ -1,0 +1,9 @@
+<div class="sep">/</div>
+<div class="subtitle">
+	<select onchange="onSelectAttribute(this)">
+		<option value="NONE">&mdash; API Methods &mdash;</option>
+		{{for value in menus['attributes']:}}
+			<option value="{{=value}}" {{if configs['attribute'] == value:}}selected="selected"{{pass}}>{{=value}}</option>
+		{{pass}}
+	</select>
+</div>

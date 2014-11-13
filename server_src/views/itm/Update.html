@@ -1,0 +1,66 @@
+{{extend 'template.html'}}
+
+<div class="head">
+	<div class="title">Termite Data Server</div>
+	{{include 'select_server.html'}}
+	{{include 'select_dataset.html'}}
+	{{include 'select_model.html'}}
+	{{include 'select_attribute.html'}}
+</div>
+
+<div class="body">
+	<div class="heading">Method: <b>itm/Update</b></div>
+	<div class="info">
+		Update a topic model.
+	</div>
+	{{include 'insert_request.html'}}
+	<div class="params">
+		<p>
+			<span class="key">action = </span>
+			<span class="value">{{MakeParamTextInput('action', Action)}}</span>
+		</p>
+		<p class="desc">
+			Enter &ldquo;train&rdquo; to enable training.
+		</p>
+		<p>
+			<span class="key">iters = </span>
+			<span class="value">{{MakeParamTextInput('iters', IterCount)}}</span>
+		</p>
+		<p class="desc">
+			Enter an integer equal to or greater than the current iteration.
+		</p>
+		<p>
+			<span class="key">mustLinks = </span>
+			<span class="value">{{MakeParamTextArea('mustLinks', json.dumps(MustLinks,encoding='utf-8') if len(MustLinks) > 0 else '')}}</span>
+		</p>
+		<p class="desc">
+			A list of list of words
+		</p>
+		<p>
+			<span class="key">cannotLinks = </span>
+			<span class="value">{{MakeParamTextArea('cannotLinks', json.dumps(CannotLinks,encoding='utf-8') if len(CannotLinks) > 0 else '')}}</span>
+		</p>
+		<p class="desc">
+			A list of list of words
+		</p>
+		<p>
+			<span class="key">keepTerms = </span>
+			<span class="value">{{MakeParamTextArea('keepTerms', json.dumps(KeepTerms,encoding='utf-8') if len(KeepTerms) > 0 else '')}}</span>
+		</p>
+		<p class="desc">
+			A dict with integer keys and a list of words as values
+		</p>
+		<p>
+			<span class="key">removeTerms = </span>
+			<span class="value">{{MakeParamTextArea('removeTerms', json.dumps(RemoveTerms,encoding='utf-8') if len(RemoveTerms) > 0 else '')}}</span>
+		</p>
+		<p class="desc">
+			A list of words
+		</p>
+		<p>
+			<span class="key">format = </span>
+			<span class="value">{{MakeParamFormat(json_only=True)}}</span>
+		</p>
+	</div>
+	{{include 'insert_response.html'}}
+</div>

@@ -1,0 +1,24 @@
+{{extend 'template.html'}}
+
+<div class="head">
+	<div class="title">Termite Data Server</div>
+	{{include 'select_server.html'}}
+	{{include 'select_dataset.html'}}
+	{{include 'select_model.html'}}
+	{{include 'select_attribute.html'}}
+</div>
+
+<div class="body">
+	<div class="heading">Method: <b>corpus/MetadataFields</b></div>
+	<div class="info">
+		Get a list of available metadata fields.
+	</div>
+	{{include 'insert_request.html'}}
+	<div class="params">
+		<p>
+			<span class="key">format = </span>
+			<span class="value">{{MakeParamFormat()}}</span>
+		</p>
+	</div>
+	{{include 'insert_response.html'}}
+</div>

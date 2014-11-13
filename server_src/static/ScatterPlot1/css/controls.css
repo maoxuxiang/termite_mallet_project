@@ -1,0 +1,22 @@
+#opacity-slider, #radius-slider {
+	display:inline-block;
+	width:200px;
+}
+
+
+.control {
+	display:inline-block;
+	margin:8px;
+	padding-bottom:10px;
+}
+
+#top-controls {
+	text-align: center;
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #aaa;
+	color: #333;
+	background: #ccc;
+}

@@ -1,0 +1,18 @@
+{{extend 'template.html'}}
+
+<div class="head">
+	<div class="title">Termite Data Server</div>
+	{{include 'select_server.html'}}
+	{{include 'select_dataset.html'}}
+</div>
+
+<div class="body">
+	<div class="heading">Data Server for Topic Models</div>
+	<div class="info">
+		<p>Termite is a visualization tool for inspecting the output of statistical topic models. The tool contains two components: data servers and web-based visualizations.</p>
+		<p>This is a data server for processing the output of topic models (e.g., built using <a href="http://mallet.cs.umass.edu/">MALLET</a>, <a href="http://www.cs.umd.edu/~ynhu/">ITM</a>, <a href="http://structuraltopicmodel.com">STM</a>, etc.) and distributing the content as a web service. For more information, see the <a href="http://github.com/uwdata/termite-data-server">Termite Data Server GitHub repository</a>.</p>
+	</div>
+
+	<div class="heading">Server Response</div>
+	<div class="response">{{=content}}</div>
+</div>

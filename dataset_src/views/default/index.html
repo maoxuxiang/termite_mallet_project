@@ -1,0 +1,15 @@
+{{extend 'template.html'}}
+<div class="heading">
+    Datasets
+</div>
+<ul>
+    {{if corpora:}}
+        {{for corpus in corpora:}}
+        <li>
+            <a href="/dataset/download?corpus={{=corpus}}">{{=corpus}}</a>
+        </li>
+        {{pass}}
+    {{else:}}
+        None yet
+    {{pass}}
+</ul>

@@ -1,0 +1,17 @@
+{{extend 'template.html'}}
+
+<div class="head">
+	<div class="title">Termite Data Server</div>
+	{{include 'select_server.html'}}
+	{{include 'select_dataset.html'}}
+	{{include 'select_model.html'}}
+</div>
+
+<div class="body">
+	<div class="heading">Method: <b>*</b></div>
+	<div class="info">
+		Use this method to retrieve a list of models associated with a dataset.
+	</div>
+	{{include 'insert_request.html'}}
+	{{include 'insert_response.html'}}
+</div>

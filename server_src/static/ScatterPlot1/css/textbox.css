@@ -1,0 +1,8 @@
+.textbox {
+	display:inline-block;
+	position:absolute;
+	overflow:auto;
+	background: white;
+	padding:5px;
+	border-left:1px solid #d3d3d3;
+}
