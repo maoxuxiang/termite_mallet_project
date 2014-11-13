@@ -73,6 +73,17 @@ To launch this data server, execute the following command. A dialogue box will a
 ./start_server.sh
 ```
 
+Build a your own topic model
+-------------------
+Put your own dataset folder in the 'data' folder.
+For exampele, your dataset are in the 'try' folder, then you copy the 'try' folder into 'data' folder.
+And run:
+```
+./demo2.py try
+```
+It will automaticly run the and build the visuliazation for you. 
+
+
 Build a topic model
 -------------------
 
